@@ -11,9 +11,9 @@ This project demonstrates a scalable system design where multiple independent se
 
 ## 🔗 Individual Repositories (original)
 
-* Auth Service: <link>
-* Orders Service: <link>
-* Payments Service: <link>
+* Auth Service: <https://github.com/ajai-motta/ticket-microservices-app>
+* Orders Service: <[link](https://github.com/ajai-motta/orders)>
+* Payments Service: <[link](https://github.com/ajai-motta/payments)>
 * Client Service: <https://github.com/ajai-motta/ticket-microservices-client>
 
 ---
