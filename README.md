@@ -7,8 +7,16 @@ A production-style microservices architecture built using Node.js, React, Kubern
 ## 🧠 Overview
 
 This project demonstrates a scalable system design where multiple independent services work together to power a full-stack application.
+---
 
-TO See my original commits
+## 🔗 Individual Repositories (original)
+
+* Auth Service: <link>
+* Orders Service: <link>
+* Payments Service: <link>
+* Client Service: <https://github.com/ajai-motta/ticket-microservices-client>
+
+---
 
 
 
@@ -17,13 +25,13 @@ TO See my original commits
 ## 🏗️ Architecture
 
 * **Client App** → Handles UI and user interaction
-* **Backend Services** → Independent microservices (Auth, Orders, Payments, etc.)
+* **Backend Services** → Independent microservices (Auth, Orders, Payments, expiration,tickets)
 * **Event Bus** → Asynchronous communication between services
 * **Infrastructure** → Kubernetes for orchestration
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure (for this repo)
 
 ```
 monorepo/
@@ -60,7 +68,7 @@ monorepo/
 
 ---
 
-## 🔄 How It Works
+##  How It Works
 
 1. User interacts with the client app
 2. Requests go through an ingress controller
@@ -70,18 +78,10 @@ monorepo/
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (on local)
 
-### 1. Clone the repo
 
-```
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-```
-
----
-
-### 2. Install dependencies (if using workspaces)
+### 1. Install dependencies (if using workspaces)
 
 ```
 npm install
@@ -89,19 +89,25 @@ npm install
 
 ---
 
-### 3. Run locally
+### 2. Run locally
 
 Make sure you have:
 
 * Docker installed
 * Kubernetes cluster (local or cloud)
+* Account in Razorpay
 
 Apply infrastructure:
 
 ```
 kubectl apply -f infra/k8s
 ```
-
+```
+kubectl apply -f infra/k8s-dev
+```
+```
+kubectl create secret generic razor-secret --from-literal RAZOR_KEY=your_key
+```
 ---
 
 ## 🌐 Services
@@ -112,10 +118,10 @@ kubectl apply -f infra/k8s
 | Orders   | Manages orders lifecycle    |
 | Payments | Handles transactions        |
 | Tickets  | Manages ticket data         |
-
+| Expiration  | Handles order expiration using background jobs/events |
 ---
 
-## 📦 Shared Packages
+## 📦 Shared Packages(@ajaisgtickets/common)
 
 * Common error handling
 * Middleware
@@ -139,13 +145,7 @@ kubectl apply -f infra/k8s
 
 ---
 
-## 🔗 Individual Repositories (Legacy)
 
-* Auth Service: <link>
-* Orders Service: <link>
-* Payments Service: <link>
-
----
 
 ## 👨‍💻 Author
 
