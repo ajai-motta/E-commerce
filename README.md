@@ -11,11 +11,12 @@ This project demonstrates a scalable system design where multiple independent se
 
 ## 🔗 Individual Repositories (original)
 
-* Auth Service: <https://github.com/ajai-motta/ticket-microservices-app>
+* Auth Service: <[link](https://github.com/ajai-motta/ticket-microservices-app)>
 * Orders Service: <[link](https://github.com/ajai-motta/orders)>
 * Payments Service: <[link](https://github.com/ajai-motta/payments)>
-* Client Service: <https://github.com/ajai-motta/ticket-microservices-client>
-
+* Client Service: <[link](https://github.com/ajai-motta/ticket-microservices-client)>
+* Expiration Service: <[link](https://github.com/ajai-motta/expiration)>
+* Tickets Service: <[link](https://github.com/ajai-motta/tickets)>
 ---
 
 
@@ -107,6 +108,7 @@ kubectl apply -f infra/k8s-dev
 ```
 ```
 kubectl create secret generic razor-secret --from-literal RAZOR_KEY=your_key
+kubectl create secret generic jwt-secret --from-literal Jwt_key=1234
 ```
 ---
 
@@ -155,9 +157,9 @@ Ajai Joseph
 
 ## ⭐️ Future Improvements
 
-* Add CI/CD pipeline
+* Add more robust CI/CD pipeline
 * Observability (logging + monitoring)
 * Rate limiting & security enhancements
-* API Gateway improvements
+* Migrating to API Gateway 
 
 ---
