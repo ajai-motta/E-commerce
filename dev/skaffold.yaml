@@ -1,0 +1,66 @@
+apiVersion: skaffold/v4beta9
+kind: Config
+manifests:
+  rawYaml:
+    - infra/k8s/*
+    - infra/k8s-dev/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: ajaijosephe/auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/.ts'
+            dest: .
+    - image: ajaijosephe/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "client/**/*.{ts,tsx}"
+            dest: /client/app
+          - src: "public/**"
+            dest: /client/public
+          - src: "hooks/**/*.{ts,tsx}"
+            dest: /client/hooks
+    - image: ajaijosephe/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/.ts'
+            dest: .
+    - image: ajaijosephe/orders
+      context: orders
+      docker:
+            dockerfile: Dockerfile
+      sync:
+            manual:
+              - src: 'src/**/.ts'
+                dest: .
+    - image: ajaijosephe/expiration
+      context: expiration
+      docker:
+            dockerfile: Dockerfile
+      sync:
+            manual:
+              - src: 'src/**/.ts'
+                dest: .
+    - image: ajaijosephe/payments
+      context: payments
+      docker:
+            dockerfile: Dockerfile
+      sync:
+            manual:
+              - src: 'src/**/.ts'
+                dest: .
+      
+
+      
+  
