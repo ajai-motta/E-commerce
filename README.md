@@ -164,4 +164,4 @@ Ajai Joseph
 
 ---
 ### Some images
-<img src="./dev/images/client-home.png" width="600"/>
+<img src="./dev/images/projecthots/client-home.png" width="600"/>
