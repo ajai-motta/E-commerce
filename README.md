@@ -163,3 +163,5 @@ Ajai Joseph
 * Migrating to API Gateway 
 
 ---
+### Some images
+<img src="./dev/images/client-home.png" width="600"/>
