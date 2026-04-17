@@ -167,9 +167,9 @@ Ajai Joseph
 * Client Homepage
 <img src="./dev/images/projecthots/client-home.png" width="600"/>
 * Client tickets
-  <img src="./dev/images/projecthots/client-tickets.png" width="600"/>
-
+<img src="./dev/images/projecthots/client-tickets.png" width="600"/>
+---
 * All pods and svc's (context gke)
   <img src="./dev/images/projecthots/k8s-pod-shell.png" width="600"/>
-   <img src="./dev/images/projecthots/8.png" width="600"/>
+  <img src="./dev/images/projecthots/8.png" width="600"/>
 
